@@ -1,0 +1,69 @@
+    
+body {
+    line-height: 1.5em;
+}
+.sectionHeaderLinks {
+    width: 450px;
+}
+
+#page {
+    overflow: hidden;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(235, 235, 235)), to(rgb(255, 255, 255)));
+}
+
+#hd {
+    color: white;
+    text-shadow: 0px -1px 1px black;
+}
+
+#sectionHeader {
+    background-color: rgb(195, 70, 5);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(212, 80, 4)), to(rgb(180, 60, 6)));
+    height: 9em;
+    line-height: 7.2em;
+    -webkit-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.6);
+    margin-left: -4px;
+    margin-right: -4px;
+    overflow: hidden;
+}
+
+#sectionNavLinks li {
+    font-size: 20px;
+}
+
+#sectionHeader h1 {
+    color: white;
+    font-weight: bold;
+    font-family: "Helvetica";
+    font-size: 14em;
+    letter-spacing:-6px;
+    margin-top: 3px;
+    text-shadow: 0px 0px 0px black;
+}
+
+#siteNavLinks {
+    background-color: rgb(64, 33, 20);
+    color: white;
+    font-size: 110%;
+}
+
+#ft {
+    background-color: rgb(230, 230, 230);
+    color: rgb(55, 55, 55);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 0.5em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border: 1px solid rgb(195, 195, 195);
+
+}
+
+#bd {
+    margin-top: 2em;
+}
+
+.lessBottomMargin {
+    padding-bottom: 0;
+}
