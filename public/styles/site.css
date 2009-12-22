@@ -27,7 +27,7 @@ body {
 }
 
 #sectionHeader a:hover {
-    background-color: rgb(150, 0, 10);
+    background-color: rgb(150, 0, 0);
     color: white;
     -webkit-border-radius: 4px;
     text-decoration: none;

@@ -1,0 +1,29 @@
+***************** cappuccino.org *****************
+
+This is the beginnings of a new site for the
+Cappuccino project. It's powered by Narwhal, and
+a custom "web framework" designed to serve content
+with a combination of templates, controllers, and
+static files.
+
+Right now, the plan for handling a URL is this:
+
+1) If there's a static resources (/public/x), 
+   deliver the static file directly, bypassing
+   Narwhal entirely.
+
+2) If there's a custom route defined, use it.
+
+3) If not, check for a controller with the given
+   name (/posts would look for a posts controller)
+   and execute the relevant method on that 
+   controller, passing the output through a 
+   template if one is available.
+
+4) If there's no controller, look in the templates
+   folder for a template with the same name. This
+   will let us build semi-static pages which still
+   use the templating system for partials, etc.
+
+5) Error page.
+
