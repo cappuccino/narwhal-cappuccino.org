@@ -16,6 +16,23 @@ body {
     text-shadow: 0px -1px 1px black;
 }
 
+#hd a {
+    color: white;
+    font-weight: normal;
+}
+
+#sectionHeader a {
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+#sectionHeader a:hover {
+    background-color: rgb(150, 0, 10);
+    color: white;
+    -webkit-border-radius: 4px;
+    text-decoration: none;
+}
+
 #sectionHeader {
     background-color: rgb(195, 70, 5);
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(212, 80, 4)), to(rgb(180, 60, 6)));
