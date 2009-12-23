@@ -1,13 +1,16 @@
     
 body {
     line-height: 1.5em;
+    text-shadow: 0px 1px 0px white;
 }
+
 .sectionHeaderLinks {
-    width: 450px;
+    width: 460px;
 }
 
 #page {
     overflow: hidden;
+    background-color: white;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(235, 235, 235)), to(rgb(255, 255, 255)));
 }
 
@@ -30,6 +33,8 @@ body {
     background-color: rgb(150, 0, 0);
     color: white;
     -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     text-decoration: none;
 }
 
@@ -38,8 +43,11 @@ body {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(212, 80, 4)), to(rgb(180, 60, 6)));
     height: 9em;
     line-height: 7.2em;
+    
     -webkit-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.6);
+    
     margin-left: -4px;
     margin-right: -4px;
     overflow: hidden;
@@ -73,6 +81,7 @@ body {
     padding: 0.5em;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
+    border-radius: 4px;
     border: 1px solid rgb(195, 195, 195);
 
 }
