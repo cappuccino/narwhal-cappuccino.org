@@ -96,3 +96,7 @@ body {
 .lessBottomMargin {
     padding-bottom: 0;
 }
+
+h2 {
+    color: rgb(63, 32, 19);
+}

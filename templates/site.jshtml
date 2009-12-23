@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" type="text/css" media="all"  href="/public/styles/oo.css" />
+    <link rel="stylesheet" type="text/css" media="all"  href="/public/styles/site.css" />
+
+    {{#stylesheets}}
+        <link rel="stylesheet" type="text/css" media="all"  href="{{.}}" />
+    {{/stylesheets}}
+
+    {{#scripts}}
+        <script type="text/javascript" href="{{.}}"></script>
+    {{/scripts}}
+</head>
+<body>
+    <div id="page"><!-- what does yui call "main"? -->
+        <div id="hd">
+            <div id="siteNavLinks">
+                <div class="page_section">
+                    <ul class="line">
+                        <li class="unit fluidListEntry"><a href="#">Home</a></li>
+                        <li class="unit fluidListEntry"><a href="#">Download</a></li>
+                        <li class="unit fluidListEntry"><a href="#">Demos</a></li>
+                        <li class="unit fluidListEntry"><a href="#">Extensions</a></li>
+                        <li class="unit fluidListEntry"><a href="#">Documentation</a></li>
+                        <li class="unit fluidListEntry"><a href="#">Community</a></li>
+                        <li class="unit fluidListEntry"><a href="#">Contribute</a></li>
+                        <li class="unit fluidListEntry lastUnit"><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- BEGIN PAGE BODY -->
+
+        {{{content}}}
+
+        <!-- END PAGE BODY -->
+        
+        <div id="ft" class="page_section">
+            <div class="line">
+                <div class="unit size1of4">
+                    <h6 class="lessBottomMargin"><a href="/download">Documentation</a></h6>
+                    <ul>
+                        <li>Guides</li>
+                        <li>Screencasts</li>
+                        <li>API Reference</li>
+                    </ul>
+                </div>
+                <div class="unit size1of4">
+                    <h6 class="lessBottomMargin"><a href="/download">Community</a></h6>
+                    <ul>
+                        <li>Blog</li>
+                        <li>Events</li>
+                        <li>Frequently Asked Questions</li>
+                    </ul>
+                </div>
+                <div class="unit size1of4">
+                    <h6 class="lessBottomMargin"><a href="/download">Contribute</a></h6>
+                    <ul>
+                        <li>Code</li>
+                        <li>Bugs</li>
+                        <li>Contributors</li>
+                    </ul>
+                </div>
+                <div class="unit size1of4 lastUnit">
+                    <h6 class="lessBottomMargin"><a href="/download">Download</a></h6>
+                    <p>Cappuccino and Objective-J are licensed under the <a href="/learn/lgpl.txt">LGPL</a>.
+                    For more information, see our <a href="/learn/licensing.php">licensing page</a>.</p>
+                </div>
+            </div>
+            <p id="copyrightInfo">
+                Copyright &copy; {{__page__.year}} - <a href="http://280north.com">280 North, Inc.</a>  
+                Cappuccino and Objective-J are registered Trademarks of 280 North.
+                <!--<a href="http://madebysofa.com"><img src="/images/minisofa.png" alt="" /></a>-->
+                Logo by <a href="http://madebysofa.com">Sofa</a>. 
+                Hosting by <a href="http://slicehost.com">Slicehost</a>.
+            </p>
+        </div>	
+    </div>
+</body>
+</html>
