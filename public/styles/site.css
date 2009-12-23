@@ -27,6 +27,9 @@ body {
 #sectionHeader a {
     padding: 0.5em;
     margin: 0.5em;
+    color: white;
+    font-weight: normal;
+    text-shadow: 0px -1px 1px black;
 }
 
 #sectionHeader a:hover {
