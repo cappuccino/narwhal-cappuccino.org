@@ -91,13 +91,14 @@ var HandleURL = function handleURL()
         {
             var page = result.__page__ || {},
                 rendered_template = Mustache.to_html(template, result);
-print('-----template------');
-print(rendered_template);
 
             if (!page.title)
                 page.title = "Cappuccino Web Framework"
             else
                 page.title += " - Cappuccino Web Framework";
+
+            if (!page.year)
+                page.year = new Date().getFullYear();
 
             page.content = rendered_template;
 

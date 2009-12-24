@@ -4,8 +4,10 @@ body {
     text-shadow: 0px 1px 0px white;
 }
 
+#bd h1, #bd h2, #bd h3, #bd h4, #bd h5, #bd h6 {line-height: 1.2em;}
+
 .sectionHeaderLinks {
-    width: 460px;
+    width: 450px;
 }
 
 #page {
@@ -99,4 +101,51 @@ body {
 
 h2 {
     color: rgb(63, 32, 19);
+}
+
+.siteLogo a {font-weight: bold !important;}
+.siteLogo {
+    text-align: right;
+    font-weight: bold;
+}
+
+.homepage h1 {
+    font-size: 13em !important;
+}
+
+.aristoButton {
+    font-size: 16px;
+    height: 26px;
+    font-weight: bold;
+    float: left;
+    min-width: 140px;
+    text-align: center;
+    line-height: 26px;
+    padding: 0.2em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-decoration: none !important;
+}
+
+a:active.aristoRed {
+    background-color: rgb(201, 101, 103);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(210, 110, 112)), to(rgb(236, 147, 148)));
+}
+
+a:visited.aristoRed {
+    color: rgb(102, 36, 36);
+}
+
+a:hover.aristoRed {
+    -webkit-box-shadow: 0px 0px 4px rgb(237, 160, 160);
+    -moz-box-shadow: 0px 0px 4px rgb(237, 160, 160);
+}
+
+.aristoRed {
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+    border: 1px solid rgb(168, 80, 82);
+    color: rgb(102, 36, 36);
+    background-color: rgb(220, 124, 125);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(236, 147, 148)), to(rgb(210, 110, 112)));
 }

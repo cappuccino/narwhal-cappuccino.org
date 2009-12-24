@@ -1,13 +1,23 @@
 
-        <div id="sectionHeader">
+        <div id="sectionHeader" class="homepage">
             <div class="page_section">
-                <div id="sectionNavLinks" class="rightCol sectionHeaderLinks">
-                    <ul class="line">
-                        <li class="unit"><a href="#">Guides</a></li>
-                        <li class="unit"><a href="#">Screencasts</a></li>
-                        <li class="unit lastUnit"><a href="#">API Reference</a></li>
-                    </ul>
+                <div class="main"><img src="/public/images/home-page-text.png" alt="cappuccino" /></div>
+            </div>
+        </div>
+        
+        <div id="bd">
+            <div class="page_section">
+                <div class="rightCol">
+                    <img src="/public/images/cappuccino.png" alt="cappuccino logo" />
                 </div>
-                <div class="main"><h1>docs</h1></div>
+                <div class="main">
+                    <h1>Cappuccino is an open-source web framework that's optimized for building web applications that look great and perform even better.</h1>
+                    <h3>Your app will be built on web standards, not plugins. And it will run in every modern browser. Best of all, you can leave the boring stuff to us and instead focus on what's unique about <em>your application</em>.</h3>
+                    <br />
+                    <p class="line">
+                        <a class="unit fluidListEntry aristoButton aristoRed" href="#">Learn More</a> 
+                        <a class="unit fluidListEntry lastUnit aristoButton aristoRed" href="#">Download Now</a>
+                    </p>
+                </div>
             </div>
         </div>

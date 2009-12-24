@@ -29,7 +29,9 @@
                         <li class="unit fluidListEntry"><a href="#">Documentation</a></li>
                         <li class="unit fluidListEntry"><a href="#">Community</a></li>
                         <li class="unit fluidListEntry"><a href="#">Contribute</a></li>
-                        <li class="unit fluidListEntry lastUnit"><a href="#">Blog</a></li>
+                        <li class="unit fluidListEntry"><a href="#">Blog</a></li>
+                        <li class="siteLogo unit size1of10 lastUnit"><a href="/">cappuccino.org</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -74,7 +76,7 @@
                 </div>
             </div>
             <p id="copyrightInfo">
-                Copyright &copy; {{__page__.year}} - <a href="http://280north.com">280 North, Inc.</a>  
+                Copyright &copy; {{year}} - <a href="http://280north.com">280 North, Inc.</a>  
                 Cappuccino and Objective-J are registered Trademarks of 280 North.
                 <!--<a href="http://madebysofa.com"><img src="/images/minisofa.png" alt="" /></a>-->
                 Logo by <a href="http://madebysofa.com">Sofa</a>. 
