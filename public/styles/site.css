@@ -114,8 +114,7 @@ h2 {
 }
 
 .aristoButton {
-    font-size: 16px;
-    height: 26px;
+    font-size: 15px;
     font-weight: bold;
     float: left;
     min-width: 140px;
@@ -126,6 +125,7 @@ h2 {
     -moz-border-radius: 4px;
     border-radius: 4px;
     text-decoration: none !important;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
 }
 
 a:active.aristoRed {
@@ -143,9 +143,29 @@ a:hover.aristoRed {
 }
 
 .aristoRed {
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
     border: 1px solid rgb(168, 80, 82);
     color: rgb(102, 36, 36);
     background-color: rgb(220, 124, 125);
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(236, 147, 148)), to(rgb(210, 110, 112)));
+}
+
+a:active.aristoSilver {
+    background-color: rgb(200, 200, 200);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(196, 196, 196)), to(rgb(237, 237, 237)));
+}
+
+a:visited.aristoSilver {
+    color: rgb(79, 79, 79);
+}
+
+a:hover.aristoSilver {
+    -webkit-box-shadow: 0px 0px 4px rgb(212, 212, 212);
+    -moz-box-shadow: 0px 0px 4px rgb(212, 212, 212);
+}
+
+.aristoSilver {
+    border: 1px solid rgb(174, 174, 174);
+    color: rgb(79, 79, 79);
+    background-color: rgb(215, 215, 215);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(237, 237, 237)), to(rgb(196, 196, 196)));
 }

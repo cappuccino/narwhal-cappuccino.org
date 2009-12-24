@@ -12,7 +12,7 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
 /* ====== Page Head, Body, and Foot ====== */
 #bd{overflow:hidden; _overflow:visible; zoom:1;}
 #page{ min-width: 1000px;} /* wraps entire page */
-.page_section{margin: 0 auto; width: 950px;}
+.page_section{margin: 0 auto; width: 950px; clear: both;}
 /* 
 "old school" and "liquid" extend #main to allow for different page widths
 (important is required so a class can overwrite an ID)
