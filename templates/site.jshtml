@@ -15,6 +15,7 @@
     {{#scripts}}
         <script type="text/javascript" href="{{.}}"></script>
     {{/scripts}}
+
 </head>
 <body>
     <div id="page"><!-- what does yui call "main"? -->
@@ -29,8 +30,14 @@
                         <li class="unit fluidListEntry"><a href="#">Community</a></li>
                         <li class="unit fluidListEntry"><a href="#">Contribute</a></li>
                         <li class="unit fluidListEntry"><a href="#">Blog</a></li>
-                        <li class="siteLogo unit size1of10 lastUnit"><a href="/">cappuccino.org</a></li>
-
+                        <li class="siteLogo unit size1of10 lastUnit">
+                        
+                            <a onclick="FB.Connect.requireSession(loginCallback); return false;" href="#" class="siteAuth">
+                                <span id="RES_ID_fb_login_text" class="">Login with Facebook</span>
+                            </a>
+                            
+                            <a href="/" class="cappDotOrg">cappuccino.org</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -83,5 +90,14 @@
             </p>
         </div>	
     </div>
+
+    <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US" type="text/javascript"></script>
+    <script type="text/javascript">
+        FB.init("e3c991e698d2c12207e458a53e19e375", "/public/xd_receiver.htm");
+        function loginCallback() {
+            alert("here");
+        }
+    </script>
+
 </body>
 </html>

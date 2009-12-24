@@ -103,10 +103,36 @@ h2 {
     color: rgb(63, 32, 19);
 }
 
-.siteLogo a {font-weight: bold !important;}
+.cappDotOrg {font-weight: bold !important;}
 .siteLogo {
     text-align: right;
     font-weight: bold;
+}
+
+.siteAuth {
+    text-align: right;
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, 0.1);
+    line-height: 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    margin-right: 1em;
+    color: rgb(245, 245, 245) !important;
+    text-shadow: 0px -1px 0px black;
+    margin-top: -1px;
+}
+
+a.siteAuth:hover {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+a.siteAuth:active {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .homepage h1 {
