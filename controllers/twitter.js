@@ -4,7 +4,7 @@ var OAuth = require("oauth"),
     conf = JSON.parse(File.read("jack.conf", {charset:"UTF8"})),
     XHR = require("browser/xhr").XMLHttpRequest,
     Couch = require("couchdb"),
-    User = require("models/user");
+    User = require("../models/user");
 
 var twitterAPI = {
     signatureMethod      : "HMAC-SHA1",
@@ -58,7 +58,7 @@ exports.login = function(request)
                 headers: {
                     "Location":messageURL(message), 
                     "Content-Type":"text/html", 
-                    "Set-Cookie": "login_redirect="+encodeURIComponent(request.referer())+"; path='/';"
+                    "Set-Cookie": "login_redirect="+encodeURIComponent(request.referer())+"; path=/;"
                 },
                 body: []
             };

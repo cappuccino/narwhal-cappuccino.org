@@ -34,6 +34,6 @@ exports.userForRequest = function(request)
 
 exports.sessionHeaderForUser = function(user, request)
 {
-    return "cpSession="+user.session+"; path=/; expires="+encodeURIComponent(((new Date()+(1209600)).toGMTString()));
+    return "cpSession="+user.session+"; path=/; expires="+encodeURIComponent(new Date(new Date().getTime() + 1209600000).toGMTString());
 }
 

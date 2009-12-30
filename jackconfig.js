@@ -55,6 +55,7 @@ var HandleURL = function handleURL()
             try {
                 thisController = require("./"+File.join("controllers", usedPathComponents));
             } catch (e) {
+                print(e + ", controller: "+File.join("controllers", usedPathComponents));
             }
 
             if (thisController)
@@ -64,7 +65,7 @@ var HandleURL = function handleURL()
         }
 
         if (controller)
-        {
+        {print(lastPathComponent)
             if (controller[lastPathComponent])
                 result = controller[lastPathComponent](request, pathComponents.slice(i, pathComponents.length));
             else if (controller["get"])
