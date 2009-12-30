@@ -32,9 +32,12 @@
                         <li class="unit fluidListEntry"><a href="#">Blog</a></li>
                         <li class="siteLogo unit size1of10 lastUnit">
                         
-                            <a onclick="FB.Connect.requireSession(loginCallback); return false;" href="#" class="siteAuth">
-                                <span id="RES_ID_fb_login_text" class="">Login with Facebook</span>
-                            </a>
+                            {{#isLoggedIn}}
+                            <a href="twitter/user" class="siteAuth"><span id="twitter_login_text" class="">Logged in as {{screen_name}}</span></a>
+                            {{/isLoggedIn}}
+                            {{#isNotLoggedIn}}
+                            <a href="twitter/login" class="siteAuth"><span id="twitter_login_text" class="">Sign-in with Twitter</span></a>
+                            {{/isNotLoggedIn}}
                             
                             <a href="/" class="cappDotOrg">cappuccino.org</a>
                         </li>
@@ -90,14 +93,6 @@
             </p>
         </div>	
     </div>
-
-    <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US" type="text/javascript"></script>
-    <script type="text/javascript">
-        FB.init("e3c991e698d2c12207e458a53e19e375", "/public/xd_receiver.htm");
-        function loginCallback() {
-            alert("here");
-        }
-    </script>
 
 </body>
 </html>
