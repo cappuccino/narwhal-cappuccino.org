@@ -1,0 +1,11 @@
+{
+   "_id": "_design/users",
+   "views": {
+       "by_session": {
+           "map": "function(doc){emit(doc.session, doc)}"
+       },
+       "by_user_id": {
+           "map": "function(doc){emit(doc.user_id, doc)}"
+       }
+   }
+}
