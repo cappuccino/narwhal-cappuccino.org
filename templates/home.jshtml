@@ -70,14 +70,14 @@
                         <div class="unit size1of4">
                             <h4><a href="{{twitter.url}}">Latest Tweets</a></h4>
                             {{#twitter_items}}
-                            <h5>{{.title}}</h5>
+                            <p>{{.title}}</p>
                             <p><a href="{{.link}}">{{.pubDate}}</a></p>
                             {{/twitter_items}}
                         </div>
                         <div class="unit size1of4">
                             <h4><a href="{{commits.url}}">Edge Code</a></h4>
                             {{#commit_items}}
-                            <h5>{{.title}}</h5>
+                            <p>{{.title}}</p>
                             <p><a href="{{.link}}">{{.pubDate}}</a></p>
                             {{/commit_items}}
                         </div>
