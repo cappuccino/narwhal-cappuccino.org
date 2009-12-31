@@ -1,0 +1,12 @@
+{
+   "_id": "_design/site",
+   "_rev": "6-0fbf21d0aa7dfb5d053bae0331676adf",
+   "views": {
+       "quotes": {
+           "map": "function(doc){if(doc.type==='quote'){emit(doc._id, doc)}}"
+       },
+       "capp_users": {
+           "map": "function(doc){if(doc.type==='capp_user'){emit(doc._id, doc)}}"
+       }
+   }
+}
