@@ -1,0 +1,18 @@
+{
+   "_id": "a341d04b802d65f3a99e6ccda6efb28d",
+   "_rev": "4-41712fa21b35120f88ddfc49a2543970",
+   "type": "capp_user",
+   "name": "280 Slides",
+   "description": "Some text about 280 Slides",
+   "url": "http://280slides.com/",
+   "image_url": "/c/cappuccino/site/a341d04b802d65f3a99e6ccda6efb28d/280slides.png",
+   "front_page": true,
+   "_attachments": {
+       "280slides.png": {
+           "stub": true,
+           "content_type": "image/png",
+           "length": 343927,
+           "revpos": 2
+       }
+   }
+}

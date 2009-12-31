@@ -3,6 +3,8 @@ var RSSChannel = require("../models/rss.j").RSSChannel,
     Quote = require("../models/quote"),
     CappUser = require("../models/capp_user");
 
+// TODO: add google groups?
+
 var blogPosts = new RSSChannel("http://capp.posterous.com/rss.xml"),
     twitterPosts = new RSSChannel("http://twitter.com/statuses/user_timeline/14581921.rss"),
     cappFlowPosts = new RSSChannel("http://feeds.feedburner.com/cappuccinoflow"),
