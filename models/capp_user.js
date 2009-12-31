@@ -9,16 +9,22 @@ exports.allCappuccinoUsers = function()
     return siteDatabase.view("site", "capp_users").rows.map(function(d){return d.value});
 }
 
-exports.randomUsers = function(howMany, options)
+// returns howMany or less random cappuccino users
+// filters is an optional array of properties which should evaluate to true through type coercion
+//
+// ex. randomUsers(5, ["frontpage", "red"])
+// would return 5 users with frontpage:true and red:true
+
+exports.randomUsers = function(howMany, filters)
 {
     var allUsers = exports.allCappuccinoUsers(),
         resultSet = [];
 
-    var filteredUsers = options.options ? allUsers.filter(function(user)
+    var filteredUsers = filters ? allUsers.filter(function(user)
     {
         var result = YES;
-        options.options.forEach(function(opt){
-            result &= user[opt] !== undefined;
+        filters.forEach(function(opt){
+            result &= user[opt] == true;
         });
         
         return result;
@@ -32,4 +38,19 @@ exports.randomUsers = function(howMany, options)
     }
 
     return resultSet;
+}
+
+exports.create = function(name, description, url, image_url)
+{
+    return siteDatabase.save({
+        type: "capp_user",
+        name: name,
+        description: description,
+        url: url
+    });
+}
+
+exports.remove = function(user)
+{
+    return siteDatabase.removeDoc(user);
 }

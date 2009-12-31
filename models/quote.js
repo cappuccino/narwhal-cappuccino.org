@@ -16,3 +16,16 @@ exports.randomQuote = function()
     return quotes[index];
 }
 
+exports.create = function(text, author)
+{
+    return siteDatabase.save({
+        type: "quote",
+        text: text,
+        author: author
+    });
+}
+
+exports.remove = function(quote)
+{
+    return siteDatabase.removeDoc(quote);
+}

@@ -42,7 +42,6 @@ var HandleURL = function handleURL()
         var pathComponents = path.split("/"),
             lastPathComponent = pathComponents[pathComponents.length - 1],
             usedPathComponents,
-            thisController,
             controller,
             template,
             result;
@@ -50,26 +49,21 @@ var HandleURL = function handleURL()
         for (var i = 1, count = pathComponents.length; i <= count; i++)
         {
             usedPathComponents = pathComponents.slice(0, i).join("/");
-            thisController = null;
 
             try {
-                thisController = require("./"+File.join("controllers", usedPathComponents));
+                controller = require("./"+File.join("controllers", usedPathComponents));
             } catch (e) {
                 print(e + ", controller: "+File.join("controllers", usedPathComponents));
-            }
-
-            if (thisController)
-                controller = thisController;
-            else
                 break;
+            }
         }
 
         if (controller)
         {
             if (controller[lastPathComponent])
-                result = controller[lastPathComponent](request, pathComponents.slice(i, pathComponents.length));
+                result = controller[lastPathComponent](request, pathComponents.slice(i - 1, pathComponents.length));
             else if (controller["get"])
-                result = controller.get(request);
+                result = controller.get(request, pathComponents.slice(i - 1, pathComponents.length));
         }
         
         if (result && result.constructor === Function.constructor)

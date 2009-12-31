@@ -17,7 +17,7 @@ exports.home = function(request)
 
     return {
         quote: Quote.randomQuote(),
-        capp_users: CappUser.randomUsers(4, {options:["front_page"]}),
+        capp_users: CappUser.randomUsers(4, ["front_page"]),
         blog: {
             title: blogPosts.title(),
             url: blogPosts.link()

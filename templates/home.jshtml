@@ -39,8 +39,8 @@
                     <div class="line">
                         {{#capp_users}}
                         <div class="unit size1of4">
-                            <h4><a href="{{.url}}">{{.title}}</a></h4>
-                            <img src="{{.image_url}}" alt="{{.title}}" />
+                            <h4><a href="{{.url}}">{{.name}}</a></h4>
+                            <img src="{{.image_url}}" alt="{{.name}}" />
                             <p>{{.description}}</p>
                         </div>
                         {{/capp_users}}
