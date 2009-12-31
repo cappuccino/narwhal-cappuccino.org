@@ -65,24 +65,24 @@ var HandleURL = function handleURL()
         }
 
         if (controller)
-        {print(lastPathComponent)
+        {
             if (controller[lastPathComponent])
                 result = controller[lastPathComponent](request, pathComponents.slice(i, pathComponents.length));
             else if (controller["get"])
                 result = controller.get(request);
-
-            if (result && result.constructor === Function.constructor)
+        }
+        
+        if (result && result.constructor === Function.constructor)
                 return result();
 
-            if (result)
-            {
-                var templatePath = File.join(usedPathComponents, lastPathComponent);
+        else if (result)
+        {
+            var templatePath = File.join(usedPathComponents, lastPathComponent);
 
-                if (templates[templatePath])
-                    template = templates[templatePath];
-                else if (templates[usedPathComponents])
-                    template = templates[usedPathComponents];
-            }
+            if (templates[templatePath])
+                template = templates[templatePath];
+            else if (templates[usedPathComponents])
+                template = templates[usedPathComponents];
         }
         else
         {
