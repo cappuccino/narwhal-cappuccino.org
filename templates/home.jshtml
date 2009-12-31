@@ -40,7 +40,7 @@
                         {{#capp_users}}
                         <div class="unit size1of4">
                             <h4><a href="{{.url}}">{{.name}}</a></h4>
-                            <img src="{{.image_url}}" alt="{{.name}}" />
+                            <img src="{{.image_url}}" alt="{{.name}}" width=200 height=200 />
                             <p>{{.description}}</p>
                         </div>
                         {{/capp_users}}

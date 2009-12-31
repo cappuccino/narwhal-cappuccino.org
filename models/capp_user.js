@@ -22,7 +22,7 @@ exports.randomUsers = function(howMany, filters)
 
     var filteredUsers = filters ? allUsers.filter(function(user)
     {
-        var result = YES;
+        var result = true;
         filters.forEach(function(opt){
             result &= user[opt] == true;
         });
@@ -33,7 +33,7 @@ exports.randomUsers = function(howMany, filters)
     var count = 0;
     while (count < howMany && count < filteredUsers.length)
     {
-        resultSet.push(quotes[Math.floor(Math.random()*quotes.length)]);
+        resultSet.push(filteredUsers[Math.floor(Math.random()*filteredUsers.length)]);
         count++;
     }
 
