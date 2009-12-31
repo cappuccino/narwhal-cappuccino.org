@@ -34,7 +34,7 @@ exports.get = function(request, remainingComponents)
             return {
                 status : 200,
                 headers : {"Content-Type":contentType, "Content-Length":String(contentLength)},
-                body : [data.toByteArray()]
+                body : [data]
             }
         }
     }
