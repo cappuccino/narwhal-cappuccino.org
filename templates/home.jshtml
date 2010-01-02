@@ -39,9 +39,8 @@
                     <div class="line">
                         {{#capp_users}}
                         <div class="unit size1of4">
-                            <h4><a href="{{.url}}">{{.name}}</a></h4>
-                            <img src="{{.image_url}}" alt="{{.name}}" width=200 height=200 />
-                            <p>{{.description}}</p>
+                            <p><a href="{{.url}}"><img class="cappUser" src="{{.image_url}}" alt="{{.name}}" /></a></p>
+                            <p><strong><a href="{{.url}}">{{.name}}</a></strong>: {{.description}}</p>
                         </div>
                         {{/capp_users}}
                     </div>
@@ -70,15 +69,13 @@
                         <div class="unit size1of4">
                             <h4><a href="{{twitter.url}}">Latest Tweets</a></h4>
                             {{#twitter_items}}
-                            <p>{{{.title}}}</p>
-                            <p><a href="{{.link}}">{{.pubDate}}</a></p>
+                            <p class="smallerText">{{{.title}}} &ndash; <a href="{{.link}}">{{.howLongAgo}}</a></p>
                             {{/twitter_items}}
                         </div>
                         <div class="unit size1of4">
                             <h4><a href="{{commits.url}}">Edge Code</a></h4>
                             {{#commit_items}}
-                            <p>{{{.title}}}</p>
-                            <p><a href="{{.link}}">{{.pubDate}}</a></p>
+                            <p class="smallerText">{{{.title}}} &ndash; <a href="{{.link}}">{{.howLongAgo}}</a></p>
                             {{/commit_items}}
                         </div>
                     </div>

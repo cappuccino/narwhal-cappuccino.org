@@ -31,11 +31,8 @@ exports.randomUsers = function(howMany, filters)
     }) : allUsers;
 
     var count = 0;
-    while (count < howMany && count < filteredUsers.length)
-    {
-        resultSet.push(filteredUsers[Math.floor(Math.random()*filteredUsers.length)]);
-        count++;
-    }
+    while (count++ < howMany && filteredUsers.length)
+        resultSet.push(filteredUsers.splice(Math.floor(Math.random()*filteredUsers.length), 1)[0]);
 
     return resultSet;
 }

@@ -150,6 +150,15 @@ a.siteAuth:active {
     //color: rgb(55, 55, 55);
 }
 
+.cappUser {
+    border: 1px solid gray;
+    padding: 1px;
+}
+
+.smallerText {
+    font-size: 90%;
+}
+
 .aristoButton {
     font-size: 15px;
     font-weight: bold;

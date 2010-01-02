@@ -20,7 +20,7 @@ exports.get = function(request, remainingComponents)
         var filename = remainingComponents[--index],
             hash = remainingComponents[--index],
             databaseName = remainingComponents.slice(0, index).join("/"),
-            database = connection.database(databaseName);
+            database = connection.database(databaseName, true);
 
         // then we pull the file from couch:
         // http://localhost:5984/cappuccino%2Fsite/hash/attachment.ext

@@ -2,7 +2,8 @@
 var RSSChannel = require("../models/rss.j").RSSChannel,
     Quote = require("../models/quote"),
     CappUser = require("../models/capp_user"),
-    TweetParser = require("../util/tweet_parser");
+    TweetParser = require("../util/tweet_parser"),
+    FriendlyTimestamp = require("../util/friendly_timestamps");
 
 // TODO: add google groups?
 
@@ -16,6 +17,11 @@ var replaceTweetText = function(tweet)
     tweet.title = TweetParser.stringByParsingLinksInString(String(tweet.title));
 }
 
+var addHowLongAgoString = function(tweet)
+{
+    tweet.howLongAgo = FriendlyTimestamp.howLongAgoString(new Date(tweet.pubDate).getTime()) + " ago";
+}
+
 exports.home = function(request)
 {
     blogPosts.update();
@@ -25,6 +31,8 @@ exports.home = function(request)
 
     twitterPosts.items().forEach(replaceTweetText);
     commits.items().forEach(replaceTweetText);
+    twitterPosts.items().forEach(addHowLongAgoString);
+    commits.items().forEach(addHowLongAgoString);
     
     return {
         quote: Quote.randomQuote(),
