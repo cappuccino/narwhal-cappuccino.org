@@ -1,7 +1,8 @@
 
 var RSSChannel = require("../models/rss.j").RSSChannel,
     Quote = require("../models/quote"),
-    CappUser = require("../models/capp_user");
+    CappUser = require("../models/capp_user"),
+    TweetParser = require("../util/tweet_parser");
 
 // TODO: add google groups?
 
@@ -10,6 +11,11 @@ var blogPosts = new RSSChannel("http://capp.posterous.com/rss.xml"),
     cappFlowPosts = new RSSChannel("http://feeds.feedburner.com/cappuccinoflow"),
     commits = new RSSChannel("http://twitter.com/statuses/user_timeline/16277269.rss");
 
+var replaceTweetText = function(tweet)
+{
+    tweet.title = TweetParser.stringByParsingLinksInString(String(tweet.title));
+}
+
 exports.home = function(request)
 {
     blogPosts.update();
@@ -17,6 +23,9 @@ exports.home = function(request)
     cappFlowPosts.update();
     commits.update();
 
+    twitterPosts.items().forEach(replaceTweetText);
+    commits.items().forEach(replaceTweetText);
+    
     return {
         quote: Quote.randomQuote(),
         capp_users: CappUser.randomUsers(4, ["front_page"]),
