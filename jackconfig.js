@@ -5,9 +5,12 @@ var File = require("file"),
     Jack = require("jack"),
     ENV = System.env,
     URI = require("uri").URI,
-    User = require("./models/user");
+    User = require("./models/user"),
+    Proxy = require("./util/proxy").Proxy;
 
-var routes = {};
+var routes = {
+    "/wiki": Proxy("/wiki", "http://real.cappuccino.org:5001")
+};
 
 var loadTemplates = function loadTemplates()
 {
@@ -50,6 +53,9 @@ var HandleURL = function handleURL()
         {
             usedPathComponents = pathComponents.slice(0, i).join("/");
 
+            if (File.isDirectory(File.join("controllers", usedPathComponents)))
+                continue;
+
             try {
                 controller = require("./"+File.join("controllers", usedPathComponents));
             } catch (e) {
@@ -67,7 +73,7 @@ var HandleURL = function handleURL()
         }
         
         if (result && result.constructor === Function.constructor)
-                return result();
+            return result();
 
         else if (result)
         {

@@ -3,7 +3,8 @@ var Couch = require("couchdb"),
     HTTP = require("http");
 
 var databaseURL = "http://127.0.0.1:5984/",
-    connection = Couch.connect(databaseURL);
+    connection = Couch.connect(databaseURL),
+    cappSiteDB = connection.database("cappuccino/site");
 
 exports.get = function(request, remainingComponents)
 {
@@ -19,9 +20,12 @@ exports.get = function(request, remainingComponents)
         // "hash" as our document name, and attachment.ext as our filename
         var filename = remainingComponents[--index],
             hash = remainingComponents[--index],
-            databaseName = remainingComponents.slice(0, index).join("/"),
-            database = connection.database(databaseName, true);
-
+            databaseName = remainingComponents.slice(0, index).join("/");
+            
+        //for now, let's hard code the database
+        //database = connection.database(databaseName, true);
+        var database = cappSiteDB;
+        
         // then we pull the file from couch:
         // http://localhost:5984/cappuccino%2Fsite/hash/attachment.ext
         // and return its contents as a byte array

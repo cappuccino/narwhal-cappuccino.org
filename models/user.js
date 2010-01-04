@@ -25,7 +25,7 @@ exports.userForRequest = function(request)
     if (sessionID)
     {
         var docs = usersDatabase.view("users", "by_session", {key:sessionID});
-        if (docs && docs.total_rows === 1)
+        if (docs && docs.rows.length === 1)
             return docs.rows[0].value;
     }
 
@@ -34,6 +34,6 @@ exports.userForRequest = function(request)
 
 exports.sessionHeaderForUser = function(user, request)
 {
-    return "cpSession="+user.session+"; path=/; expires="+encodeURIComponent(new Date(new Date().getTime() + 1209600000).toGMTString());
+    return "cpSession="+user.session+"; path=/; domain=.cappuccino.org; expires="+encodeURIComponent(new Date(new Date().getTime() + 1209600000).toGMTString());
 }
 

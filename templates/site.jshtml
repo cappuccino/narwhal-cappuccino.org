@@ -23,12 +23,12 @@
             <div id="siteNavLinks">
                 <div class="page_section">
                     <ul class="line">
-                        <li class="unit fluidListEntry"><a href="#">Home</a></li>
-                        <li class="unit fluidListEntry"><a href="#">Download</a></li>
-                        <li class="unit fluidListEntry"><a href="#">Demos</a></li>
-                        <li class="unit fluidListEntry"><a href="#">Extras</a></li>
-                        <li class="unit fluidListEntry"><a href="#">Documentation</a></li>
-                        <li class="unit fluidListEntry"><a href="#">Community</a></li>
+                        <li class="unit fluidListEntry"><a href="/">Home</a></li>
+                        <li class="unit fluidListEntry"><a href="/downloads">Download</a></li>
+                        <li class="unit fluidListEntry"><a href="/demos">Demos</a></li>
+                        <li class="unit fluidListEntry"><a href="/extras">Extras</a></li>
+                        <li class="unit fluidListEntry"><a href="/docs">Documentation</a></li>
+                        <li class="unit fluidListEntry"><a href="/wiki">Community</a></li>
                         <li class="unit fluidListEntry"><a href="http://capp.posterous.com/">Blog</a></li>
                         <li class="siteLogo unit size1of10 lastUnit">
                         

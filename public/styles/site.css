@@ -155,6 +155,17 @@ a.siteAuth:active {
     padding: 1px;
 }
 
+.demoApp {
+    background-color: white;
+    border: 1px dashed rgb(200, 200, 200);
+    margin: 1em;
+}
+
+.demoPath {
+    font-size: 80%;
+    color: gray;
+}
+
 .smallerText {
     font-size: 90%;
 }

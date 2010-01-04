@@ -1,0 +1,40 @@
+
+        <div id="sectionHeader" class="homepage">
+            <div class="page_section">
+                <div class="main"><h1>demos</h1></div>
+            </div>
+        </div>
+        
+        <div class="bd firstBody">
+            <div class="page_section">
+                <div class="rightCol">
+
+                </div>
+                <div class="main">
+                    <h2>Demo Cappuccino Apps</h2>
+                    <p>These demos are all pulled from the <a href="http://github.com/280north/cappuccino-demos">cappuccino-demos</a> Github repository. 
+                    They are a combination of code samples, UI demos, and small applications.
+                    Many of these are part of a larger tutorial, and where that is the case the tutorial
+                    is linked in the description.</p>
+                    
+                    <p>To get the code for any of these demos, just click on the "view on github" link. 
+                    Since everything is stored in git, the code is always just a git clone away.</p>
+                    
+                    <div class="line">
+                        {{#demos}}
+                        <div class="unit size1of2">
+                            <div class="demoApp">
+                                <h3><a href="{{.URL}}">{{.name}}</a> <span class="demoPath">{{.path}}</span></h3>
+                                <p>{{{.description}}}</p>
+                                <p>
+                                    <a href="{{.URL}}">launch demo</a> |
+                                    <a href="{{.githubURL}}">view on github</a> 
+                                    <!--| <a href="{{.zipURL}}">download (zip)</a>-->
+                                </p>
+                            </div>
+                        </div>
+                        {{/demos}}
+                    </div>
+                </div>
+            </div>
+        </div>

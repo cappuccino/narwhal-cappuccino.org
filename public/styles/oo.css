@@ -27,6 +27,7 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
 /* extend columns to allow for common column widths */
 .gMail{width:160px;}
 .gCal{width:180px;}
+.wikiSidebar{width:200px;}
 .yahoo{width:240px;}
 .myYahoo{width:300px;}
 /* **************** GRIDS ***************** */
@@ -62,8 +63,8 @@ table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, tab
 /* ====== Elements ====== */
 em{font-style: italic;}
 strong{font-weight:bold;}
-hr{border: 5px solid #BCBCBC; border-width: 0 0 5px 0; margin: 20px 20px 0 20px;}
-code{color:#0B8C8F;}
+hr{border: 3px solid #BCBCBC; border-width: 0 0 3px 0; margin: 20px 20px 0 20px;}
+code{ color: rgb(205, 75, 75); }
 /* ====== Headings ====== */
 /* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
 h1, .h1{font-size:196%;  font-weight:normal; font-style: normal; color: rgb(195, 70, 5);}

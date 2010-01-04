@@ -29,11 +29,20 @@ exports.home = function(request)
     cappFlowPosts.update();
     commits.update();
 
-    twitterPosts.items().forEach(replaceTweetText);
-    commits.items().forEach(replaceTweetText);
-    twitterPosts.items().forEach(addHowLongAgoString);
-    commits.items().forEach(addHowLongAgoString);
-    
+    if (!twitterPosts.items().processed)
+    {
+        twitterPosts.items().forEach(replaceTweetText);
+        twitterPosts.items().forEach(addHowLongAgoString);
+        twitterPosts.items().processed = true;
+    }
+
+    if (!commits.items().processed)
+    {
+        commits.items().forEach(replaceTweetText);
+        commits.items().forEach(addHowLongAgoString);
+        commits.items().processed = true;
+    }
+
     return {
         quote: Quote.randomQuote(),
         capp_users: CappUser.randomUsers(4, ["front_page"]),
@@ -41,22 +50,22 @@ exports.home = function(request)
             title: blogPosts.title(),
             url: blogPosts.link()
         },
-        blog_items: blogPosts.items().splice(0, 5),
+        blog_items: blogPosts.items().slice(0, 6),
         twitter: {
             title: twitterPosts.title(),
             url: twitterPosts.link()
         },
-        twitter_items: twitterPosts.items().splice(0, 3),
+        twitter_items: twitterPosts.items().slice(0, 3),
         flow: {
             title: cappFlowPosts.title(),
             url: cappFlowPosts.link()
         },
-        flow_items: cappFlowPosts.items().splice(0, 5),
+        flow_items: cappFlowPosts.items().slice(0, 6),
         commits: {
             title: commits.title(),
             url: commits.link()
         },
-        commit_items: commits.items().splice(0, 3)
+        commit_items: commits.items().slice(0, 3)
     }
 }
 
