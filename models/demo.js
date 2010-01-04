@@ -5,11 +5,15 @@ var File = require("file"),
 
 var demosURL = "/public/demos/",
     demosPath = "public/demos",
-    githubURLPrefix = "http://github.com/280north/cappuccino-demos/tree/master/";
+    githubURLPrefix = "http://github.com/280north/cappuccino-demos/tree/master/",
+    frameworksPath = "public/Frameworks";
 
 if (!File.exists(demosPath))
     OS.system("git clone git://github.com/280north/cappuccino-demos.git "+demosPath);
-    
+
+if (!File.exists(frameworksPath))
+    OS.system("git clone git://github.com/280north/cappuccino-frameworks.git "+frameworksPath);
+
 var Demo = exports.Demo = function(aPath)
 {
     this._path = aPath;
