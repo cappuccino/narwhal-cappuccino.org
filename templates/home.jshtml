@@ -16,7 +16,7 @@
 
                     <p class="line">
                         <a class="unit fluidListEntry aristoButton aristoSilver" href="#">Learn More</a> 
-                        <a class="unit fluidListEntry lastUnit aristoButton aristoSilver" href="#">Download Now</a>
+                        <a class="unit fluidListEntry lastUnit aristoButton aristoSilver" href="/downloads">Download Now</a>
                     </p>
                 </div>
             </div>

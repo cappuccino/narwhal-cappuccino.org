@@ -1,0 +1,54 @@
+
+        <div id="sectionHeader" class="homepage">
+            <div class="page_section">
+                <div class="main"><h1>download</h1></div>
+            </div>
+        </div>
+        
+        <div class="bd firstBody">
+            <div class="page_section">
+                <div class="main line">
+                    <div class="unit size1of10">&nbsp;</div>
+                    <div class="unit size2of5">
+                        <a href="/downloads/starter/latest"><img src="/public/images/arrow.png" alt="download latest starter package" /></a>
+                    </div>
+                    <div class="unit size2of5">
+                        <h1>Download Cappuccino</h1>    
+                        <h3>Latest Version: 0.7.1 (July 6th, 2009)</h3>
+                        <h2><a href="/downloads/starter/latest">Starter Package</a></h2>
+                        <p>Get started fast with Cappuccino and a new project template.</p>
+                        <h2><a href="/downloads/tools/latest">Frameworks & Tools</a></h2>
+                        <p>Dig deeper with the frameworks and build tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+        <div class="bd">
+            <div class="page_section">
+                <div class="main">
+        
+                    <h3>Now What?</h3> 
+                    <p>You'll probably want to check out our <a href="/learn/tutorials/">tutorials</a> section.  <a href="/learn/tutorials/starter-tutorial.php">This one</a> is designed specifically for figuring out what to do the very first time you download Cappuccino.</p> 
+                     
+                    <h3>Getting the Source</h3> 
+                    <p>If you'd like the full source, you can check it out on our Github <a href="http://github.com/280north/cappuccino/">repository</a>, or clone it with this command:</p> 
+                    <code class="codeBlock"> 
+                    git clone git://github.com/280north/cappuccino.git
+                    </code> 
+                    <p>Learn more about <a href="/contribute">contributing</a>.</p> 
+                     
+                    <h3>Archived Versions</h3> 
+                    <p>Looking for older versions of Cappuccino? You can find some of our latest releases below.</p> 
+                    <ul> 
+                        {{#downloads}}
+                            <li><a href = "{{.starterURL}}">Cappuccino Starter {{.version}}</a> and <a href = "{{.toolsURL}}">Cappuccino Tools {{.version}}</a></li> 
+                        {{/downloads}}
+                    </ul> 
+                     
+                    <h3>Contributors</h3> 
+                    <p>Visit the <a href="http://contributors.cappuccino.org/">contributors page</a> for a list of contributors to Cappuccino. For a list of Cappuccino forks on Github, check out the <a href="http://github.com/280north/cappuccino/network">network</a> page.</p> 
+ 
+                </div>
+            </div>
+        </div>
