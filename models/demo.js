@@ -1,11 +1,15 @@
 
 var File = require("file"),
-    Plist = require("objective-j/plist");
+    Plist = require("objective-j/plist")
+    OS = require("os");
 
 var demosURL = "/public/demos/",
     demosPath = "public/demos",
     githubURLPrefix = "http://github.com/280north/cappuccino-demos/tree/master/";
 
+if (!File.exists(demosPath))
+    OS.system("git clone git://github.com/280north/cappuccino-demos.git "+demosPath);
+    
 var Demo = exports.Demo = function(aPath)
 {
     this._path = aPath;
