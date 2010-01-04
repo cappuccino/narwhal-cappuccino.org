@@ -7,19 +7,16 @@
         
         <div class="bd firstBody">
             <div class="page_section">
-                <div class="main line">
-                    <div class="unit size1of10">&nbsp;</div>
-                    <div class="unit size2of5">
-                        <a href="/downloads/starter/latest"><img src="/public/images/arrow.png" alt="download latest starter package" /></a>
-                    </div>
-                    <div class="unit size2of5">
-                        <h1>Download Cappuccino</h1>    
-                        <h3>Latest Version: 0.7.1 (July 6th, 2009)</h3>
-                        <h2><a href="/downloads/starter/latest">Starter Package</a></h2>
-                        <p>Get started fast with Cappuccino and a new project template.</p>
-                        <h2><a href="/downloads/tools/latest">Frameworks & Tools</a></h2>
-                        <p>Dig deeper with the frameworks and build tools</p>
-                    </div>
+                <div class="leftCol myYahoo">
+                    <img src="/public/images/cappuccino.png" alt="cappuccino logo" />
+                </div>
+                <div class="main">
+                    <h1>Download Cappuccino</h1>    
+                    <h3>Latest Version: 0.7.1 (July 6th, 2009)</h3>
+                    <h2><a href="/downloads/starter/latest">Starter Package</a></h2>
+                    <p>Get started fast with Cappuccino and a new project template.</p>
+                    <h2><a href="/downloads/tools/latest">Frameworks & Tools</a></h2>
+                    <p>Dig deeper with the frameworks and build tools</p>
                 </div>
             </div>
         </div>
