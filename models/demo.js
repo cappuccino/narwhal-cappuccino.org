@@ -55,7 +55,7 @@ Demo.prototype.path = function()
 
 Demo.prototype.URL = function()
 {
-    return File.join(demosURL, this._path, "index-deploy.html");
+    return File.join(demosURL, encodeSpaces(this._path), "index-deploy.html");
 }
 
 Demo.prototype.description = function()
@@ -70,5 +70,15 @@ Demo.prototype.excluded = function()
 
 Demo.prototype.githubURL = function()
 {
-    return githubURLPrefix+this.path();
+    return githubURLPrefix+encodeSpaces(this.path());
+}
+
+Demo.prototype.archiveURL = function()
+{
+    return "/demos/"+encodeSpaces(this.path())+"/archive";
+}
+
+var encodeSpaces = function(string)
+{
+    return string.replace(/ /g, "%20");
 }

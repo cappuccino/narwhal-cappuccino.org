@@ -28,8 +28,8 @@
                                 <p>{{{.description}}}</p>
                                 <p>
                                     <a href="{{.URL}}">launch demo</a> |
-                                    <a href="{{.githubURL}}">view on github</a> 
-                                    <!--| <a href="{{.zipURL}}">download (zip)</a>-->
+                                    <a href="{{.githubURL}}">view on github</a> | 
+                                    <a href="{{.archiveURL}}">download (zip)</a>
                                 </p>
                             </div>
                         </div>
