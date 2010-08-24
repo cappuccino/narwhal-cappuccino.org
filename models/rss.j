@@ -3,8 +3,6 @@
 @import <Foundation/CPURLConnection.j>
 @import <Foundation/CPDate.j>
 
-LINK_REGEX = /(\[(.+?)\])?\(?([A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:,;#\+%&\?\/.=]+)\)?/g;
-
 // RSSChannel
 // implements the spec @ http://cyber.law.harvard.edu/rss/rss.html
 

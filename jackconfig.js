@@ -32,7 +32,7 @@ var HandleURL = function handleURL()
 
     return function (env)
     {
-        var path  = env["PATH_INFO"] ? env["PATH_INFO"].squeeze("/") : "",
+        var path  = env["PATH_INFO"] ? env["PATH_INFO"] : "",
             hHost = env['HTTP_HOST'], sName = env['SERVER_NAME'], sPort = env['SERVER_PORT']
             request = new Jack.Request(env);
 
